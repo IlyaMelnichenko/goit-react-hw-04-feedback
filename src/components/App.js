@@ -41,11 +41,11 @@ export const App=()=>{
   };
   const totalFeedback = countTotalFeedback();
   const positivePercentage= countPositiveFeedbackPercentage();
- 
+  const options = ['good','bad','neutral']
   return (
       <StyledFeedBack>
         <Section title="Please leave feedback">
-        <FeedbackOptions onClickAdd={onClickAdd}  options={['good','bad','neutral']} />
+        <FeedbackOptions onClickAdd={onClickAdd}  options={options} />
         </Section>
         <Section title="Statistics">
        {countTotalFeedback()===0?(<Notification message={'Please leave feedback'} />):(
